@@ -75,7 +75,7 @@ def Knapsack(h, time):
 
 	res = DP[len(time)][h]
 	arr = []
-	#Find the fibbonaccy numbers that can be used to represent the hour of minutes
+	#Find the fibbonacci numbers that can be used to represent the hour of minutes
 	for i in range(len(time), 0, -1):
 		if(res <= 0):
 			break;
@@ -115,7 +115,7 @@ def find_colour(hour, minutes):
 			green.append(minutes[i])
 	#Return three color sequence for Hour and minutes
 	return [red, green, blue]
-#Clock representation using five fibonaccy no (1, 1, 2, 3, 5) 
+#Clock representation using five fibonacci no (1, 1, 2, 3, 5) 
 def main():
 	#Initialization of hour
 	h = 2
@@ -124,15 +124,15 @@ def main():
 	while(1):
 		for i in range(100000000):
 			k = i
-		#First five fibbonaccy number
+		#First five fibbonacci number
 		time = [1, 1, 2, 3, 5]
 		cnt = m / 5
 		cnt = int(cnt)
 		hour = []
 		minutes = []
-		#Find the fibonaccy number's that repesent the current hour
+		#Find the fibonacci number's that repesent the current hour
 		hour = Knapsack(h, time)
-		#Find the fibonaccy number's that repesent the current minutes
+		#Find the fibonacci number's that repesent the current minutes
 		minutes = Knapsack(cnt, time)
 		#Here Red denotes Hour, Green denotes minutes and Blue denotes both hour and minutes
 		red, green, blue = find_colour(hour, minutes)
