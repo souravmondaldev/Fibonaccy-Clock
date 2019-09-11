@@ -1,1 +1,1 @@
-# Fibonaccy-Clock
+# Fibonacci-Clock
