@@ -87,7 +87,7 @@ def Knapsack(h, time):
 	#Return the sequence
 	return arr
 	
-def find_colour(hour, minutes):
+def findColour(hour, minutes):
 	red = []
 	green = []
 	blue = []
@@ -126,16 +126,16 @@ def main():
 			k = i
 		#First five fibbonacci number
 		time = [1, 1, 2, 3, 5]
-		cnt = m / 5
-		cnt = int(cnt)
+		count = m / 5
+		count = int(count)
 		hour = []
 		minutes = []
 		#Find the fibonacci number's that repesent the current hour
 		hour = Knapsack(h, time)
 		#Find the fibonacci number's that repesent the current minutes
-		minutes = Knapsack(cnt, time)
+		minutes = Knapsack(count, time)
 		#Here Red denotes Hour, Green denotes minutes and Blue denotes both hour and minutes
-		red, green, blue = find_colour(hour, minutes)
+		red, green, blue = findColour(hour, minutes)
 
 		print("red ", red)
 		print("green ", green)
